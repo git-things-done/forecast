@@ -1,0 +1,16 @@
+name: “Forecast” for Git Things Done
+description: >
+  Inserts today’s forecast into today’s entry.
+inputs:
+  token:
+    default: ${{ github.token }}
+  today:
+    required: false
+  longitude:
+    required: true
+  latitude:
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  # ^^ because we want node 16 so we can use modern features
