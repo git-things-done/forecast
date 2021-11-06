@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "target": "ESNext",
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "outDir": "built",
+    "strict": true
+  },
+  "exclude": ["*.test.ts"]
+}
