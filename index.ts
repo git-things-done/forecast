@@ -17,7 +17,8 @@ if (lat == undefined || lng == undefined) {
   exit(0)
 }
 
-debug(`lat: ${lat}\nlng: ${lng}`)
+debug(`lat: ${lat}`)
+debug(`lng: ${lng}`)
 
 const forecast = await getForecast(lat, lng)
 

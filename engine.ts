@@ -1,3 +1,4 @@
+import { debug } from '@actions/core'
 import fetch from 'node-fetch'
 
 export async function getForecast(lat: string | number, lng: string | number): Promise<string | undefined> {
@@ -32,6 +33,8 @@ export async function getForecast(lat: string | number, lng: string | number): P
   if (!(rsp2.status === undefined || rsp2.status == 200)) {
     throw new Error(JSON.stringify(rsp1, null, 2))
   }
+
+  debug(`out: ${JSON.stringify(rsp2, null, 2)}`)
 
   return rsp2.properties.periods.find(x => x.number == 1)?.detailedForecast
 }
